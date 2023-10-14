@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <form method="get">
+        {{form.hidden_tag()}}
+        {{form.item.label}}{{form.item}}
+        {{form.weight.label}} {{form.weight}}
+        {{form.submit}}
+
+        {% if data %}
+            {% for item in data %}
+                {{item}}              
+            {% endfor %}   
+            
+        {% else %}
+            <h1>data not available</h1>
+        {% endif %}
+    </form>
+</head>
+<body>
+</body>
+</html>
